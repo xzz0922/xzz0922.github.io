@@ -59,7 +59,9 @@
 	        
 				<li><a href="/categories">分类</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/archives">归档</a></li>
+	        
+				<li><a href="/tags">标签</a></li>
 	        
 			</ul>
 		</nav>
@@ -119,6 +121,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -139,11 +143,13 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/categories">分类</a></li>
+					<li style="width: 25%"><a href="/categories">分类</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/archives">归档</a></li>
+		        
+					<li style="width: 25%"><a href="/tags">标签</a></li>
 		        
 				</ul>
 			</nav>
@@ -168,8 +174,8 @@
        	<nav>
     			<font size="3" color="#dd00dd">
 			文章 4 &emsp;&emsp;
-			分类 0 &emsp;&emsp;
-			标签 0
+			分类 2 &emsp;&emsp;
+			标签 2
 			</font>
        	</nav>
   </div>
@@ -183,6 +189,28 @@
 <br /> 
 
   
+  <ul class="category-list">
+    
+      
+        <li class="category-list-item">
+          <a href="/categories/hexo/" class="category-list-link" title="hexo">
+            hexo
+            <span class="category-list-count">1</span>
+          </a>
+        </li>
+      
+    
+      
+        <li class="category-list-item">
+          <a href="/categories/tools/" class="category-list-link" title="tools">
+            tools
+            <span class="category-list-count">1</span>
+          </a>
+        </li>
+      
+    
+  </ul>
+  
 
 
 <br /> 
@@ -193,10 +221,21 @@
 
 <div align=center>
 
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-wrap">
+    <div id="myCanvasContainer" class="widget tagcloud">
+      <canvas width="300" height="300" id="resCanvas" style="width=100%">
+        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%87%E7%AB%A0/" style="font-size: 10px;">工具类文章</a>
+      </canvas>
+    </div>
+  </div>
+</div>
+
 
 
   <div class="tag-cloud">
-    
+    <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%96%87%E7%AB%A0/" style="font-size: 15px;">工具类文章</a>
   </div>
 
 
@@ -292,6 +331,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">工具类文章</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
