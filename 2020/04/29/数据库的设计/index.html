@@ -8,22 +8,23 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据库的设计 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据库的设计1、多表之间的关系 一对一（了解）： 如：人和身份证     分析：一个人只有一个身份证，一个身份证只能对应一个人   一对多（多对一）： 如：部门和员工 分析：一个部门有多个员工，一个员工只能对应一个部门   多对多： 如：学生和课程  分析：一个学生可以选择很多门课程，一个课程也可以被很多学生选择     2、实现关系1、一对多（多对一）： 如：部门和员工 实现方式：在多的一方建立">
+  <meta name="description" content="数据库的设计1、多表之间的关系 一对一（了解）： 如：人和身份证     分析：一个人只有一个身份证，一个身份证只能对应一个人   一对多（多对一）： 如：部门和员工 分析：一个部门有多个员工，一个员工只能对应一个部门   多对多： 如：学生和课程  分析：一个学生可以选择很多门课程，一个课程也可以被很多学生选择     2、实现关系1、一对多（多对一）： 如：部门和员工  实现方式：在多的一方建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库的设计">
 <meta property="og:url" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="数据库的设计1、多表之间的关系 一对一（了解）： 如：人和身份证     分析：一个人只有一个身份证，一个身份证只能对应一个人   一对多（多对一）： 如：部门和员工 分析：一个部门有多个员工，一个员工只能对应一个部门   多对多： 如：学生和课程  分析：一个学生可以选择很多门课程，一个课程也可以被很多学生选择     2、实现关系1、一对多（多对一）： 如：部门和员工 实现方式：在多的一方建立">
+<meta property="og:description" content="数据库的设计1、多表之间的关系 一对一（了解）： 如：人和身份证     分析：一个人只有一个身份证，一个身份证只能对应一个人   一对多（多对一）： 如：部门和员工 分析：一个部门有多个员工，一个员工只能对应一个部门   多对多： 如：学生和课程  分析：一个学生可以选择很多门课程，一个课程也可以被很多学生选择     2、实现关系1、一对多（多对一）： 如：部门和员工  实现方式：在多的一方建">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429160511727.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429164040471.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429234954531.png">
-<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429235051052.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200422205216722.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429162753207.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429164040471.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429234954531.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429235051052.png">
 <meta property="article:published_time" content="2020-04-29T15:52:18.240Z">
-<meta property="article:modified_time" content="2020-05-01T03:16:01.697Z">
+<meta property="article:modified_time" content="2020-05-01T03:21:43.881Z">
 <meta property="article:author" content="Xzz&#39;s blog">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429160511727.png">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200422205216722.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -236,18 +237,22 @@
 </li>
 </ol>
 <h3 id="2、实现关系"><a href="#2、实现关系" class="headerlink" title="2、实现关系"></a>2、实现关系</h3><h4 id="1、一对多（多对一）："><a href="#1、一对多（多对一）：" class="headerlink" title="1、一对多（多对一）："></a>1、一对多（多对一）：</h4><ul>
-<li>如：部门和员工</li>
-<li>实现方式：在多的一方建立外键，指向一的一方的主键。<img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429160511727.png" alt="image-20200429160511727"></li>
+<li><p>如：部门和员工</p>
+</li>
+<li><p>实现方式：在多的一方建立外键，指向一的一方的主键。</p>
+</li>
 </ul>
+<p>  <img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200422205216722.png" alt="image-20200429160511727"></p>
 <h4 id="2、多对多："><a href="#2、多对多：" class="headerlink" title="2、多对多："></a>2、多对多：</h4><ul>
 <li>如：学生和课程</li>
 <li>实现方式：多对多关系实现需要借助第三张中间表。中间表至少包含两个字段，这两个字段作为第三张表的外键，分别指向两张表的主键</li>
 </ul>
+<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429162753207.png" alt="image-20200429162753207"></p>
 <h4 id="3、一对一："><a href="#3、一对一：" class="headerlink" title="3、一对一："></a>3、一对一：</h4><ul>
 <li><p>如：人和身份证</p>
 </li>
 <li><p>实现方式：一对一关系实现，可以在任意一方添加唯一外键指向另一方的主键。</p>
-<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429164040471.png" alt="image-20200429164040471"></p>
+<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429164040471.png" alt="image-20200429164040471"></p>
 </li>
 </ul>
 <h3 id="3、数据库范式"><a href="#3、数据库范式" class="headerlink" title="3、数据库范式"></a>3、数据库范式</h3><ul>
@@ -278,9 +283,9 @@
 </li>
 </ul>
 <p>  解决问题前：</p>
-<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429234954531.png" alt="image-20200429234954531"></p>
+<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429234954531.png" alt="image-20200429234954531"></p>
 <p>解决问题后：</p>
-<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/images%5Cimage-20200429235051052.png" alt="image-20200429235051052"></p>
+<p><img src="/2020/04/29/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1/image-20200429235051052.png" alt="image-20200429235051052"></p>
 
       
 
